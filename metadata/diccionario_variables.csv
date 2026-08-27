@@ -1,0 +1,20 @@
+variable,tipo,descripcion,significado_presidencia,significado_congreso,notas_criticas
+DEP,texto,Codigo departamental Registraduria,31 = Valle del Cauca,31 = Valle del Cauca,NO es codigo DANE. DANE Valle = 76. Requiere crosswalk.
+DEPNOMBRE,texto,Nombre departamento,VALLE,VALLE,-
+MUN,texto,Codigo municipal Registraduria,001=CALI ... 42 codigos,001=CALI ... 42 codigos,NO es DANE. Mapear a MPIO_CDPMP (76001...). 42 entradas.
+MUNNOMBRE,texto,Nombre municipio,Nombre oficial,Nombre oficial,-
+ZONA,texto,Zona electoral,01-22 comunas / 99 corregimiento / >=90 especial,01-22 / 99 / >=90 (varia),CRITICO: ZONA 1-22 = comuna Cali; ZONA 99 = corregimiento; ZONA>=90 = zonas especiales (NACIONAL). Preservar ceros.
+PUESTO,texto,Codigo de puesto dentro de la zona,Secuencial por zona,Secuencial por zona,NO es unico global. Llave = DEP+MUN+ZONA+PUESTO. Preservar ceros.
+PUESNOMBRE,texto,Nombre del puesto de votacion,Nombre del sitio,Nombre del sitio,Usar para homologacion con cartografia de puestos.
+MESA,texto,Numero de mesa dentro del puesto,001..079 aprox,001..078 aprox,NO es unica global. Llave mesa = DEP+MUN+ZONA+PUESTO+MESA. Preservar ceros.
+COMUCODIGO,texto,Codigo comuna (segun corporacion),Comuna real (001-022) o 000 especial,000/circunscripcion (NO geografia Cali),CRITICO: significado distinto por corporacion.
+COMUNOMBRE,texto,Nombre comuna (segun corporacion),COMUNA 1..22 (geografia valida),NACIONAL / CIRCUNSCRIPCION (NO geografia),CRITICO: en Congreso NO es geografia de Cali.
+CORCODIGO,texto,Codigo corregimiento/corporacion,Corregimiento o etiqueta,Etiqueta corporacion,Significado distinto por corporacion.
+CORNOMBRE,texto,Nombre corregimiento/corporacion,PRESIDENTE (etiqueta corp.),SENADO / CAMARA / CONSULTAS,CRITICO: en estos CSV actua como tipo de corporacion, NO como geografia.
+CIR,texto,Circunscripcion,0 (unico),0/1/4/5,Congreso: separar circunscripciones. No mezclar. 4/5 posibles especiales.
+PAR,texto,Codigo de partido,Codigo,Codigo,-
+PARNOMBRE,texto,Nombre del partido,Nombre,Nombre,-
+CAN,texto,Codigo de candidato,Codigo; 996/997/998 especiales,Codigo; 996/997/998 especiales,996=BLANCO 997=NULOS 998=NO MARCADOS. Excluir de "candidatos".
+CANCEDULA,texto,Cedula del candidato,Puede venir vacia,Puede venir vacia,-
+CANNOMBRE,texto,Nombre del candidato,Nombre o etiqueta de voto especial,Nombre o etiqueta,-
+VOTOS,entero,Votos registrados,Entero (texto con ceros),Entero (texto con ceros),100% numerico, sin negativos ni nulos en la auditoria. Convertir a int solo en ETL.

@@ -1,0 +1,17 @@
+{
+  "departamento": {
+    "registraduria": "31",
+    "dane": "76",
+    "nombre": "VALLE DEL CAUCA",
+    "municipios": 42
+  },
+  "cali": {
+    "municipio_registraduria": "001",
+    "dane": "76001",
+    "comunas": 22,
+    "corregimientos": 15,
+    "puestos_cartografiados": 206,
+    "zona_reglas": "1-22 no mapea 1:1 a comuna; 99 corregimiento; >=90 especial. Territorio via COMUNOMBRE (Presidencia) o crosswalk (Congreso)."
+  },
+  "advertencia_comuna": "102 puestos con conflicto comuna electoral vs geografica (REQUIERE_VALIDACION)."
+}

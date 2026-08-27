@@ -1,0 +1,45 @@
+{
+  "elecciones": [
+    {
+      "eleccion": "Presidencia 2026",
+      "corporacion": "Presidencia",
+      "vueltas": [
+        "1V",
+        "2V"
+      ]
+    },
+    {
+      "eleccion": "Congreso 2026",
+      "corporacion": "Senado",
+      "vueltas": [
+        "NA"
+      ]
+    },
+    {
+      "eleccion": "Congreso 2026",
+      "corporacion": "Cámara",
+      "vueltas": [
+        "NA"
+      ]
+    },
+    {
+      "eleccion": "Congreso 2026",
+      "corporacion": "Consultas",
+      "vueltas": [
+        "NA"
+      ]
+    }
+  ],
+  "codigos_corporacion": {
+    "Presidencia|1V": "PRE1",
+    "Presidencia|2V": "PRE2",
+    "Senado|NA": "SEN",
+    "Cámara|NA": "CAM",
+    "Consultas|NA": "CON"
+  },
+  "votos_especiales": {
+    "996": "VOTOS EN BLANCO",
+    "997": "VOTOS NULOS",
+    "998": "VOTOS NO MARCADOS"
+  }
+}

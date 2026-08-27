@@ -1,0 +1,117 @@
+{
+  "tests": "25/25 PASS",
+  "datos": {
+    "filas_total": 1710766,
+    "votos_total": 12885786,
+    "por_fuente": [
+      {
+        "archivo_fuente": "Presidenciales 2026 PV CALI.csv",
+        "filas": 40437,
+        "votos": 1066623
+      },
+      {
+        "archivo_fuente": "Presidenciales 2026 PV VALLE.csv",
+        "filas": 86885,
+        "votos": 2137681
+      },
+      {
+        "archivo_fuente": "Presidenciales 2026 SV  VALLE.csv",
+        "filas": 41675,
+        "votos": 2328281
+      },
+      {
+        "archivo_fuente": "Presidenciales 2026 SV CALI.csv",
+        "filas": 19128,
+        "votos": 1151118
+      },
+      {
+        "archivo_fuente": "Senado y Camara Cali.csv",
+        "filas": 511062,
+        "votos": 2028622
+      },
+      {
+        "archivo_fuente": "Senado y Camara Valle.csv",
+        "filas": 1011579,
+        "votos": 4173461
+      }
+    ],
+    "duplicados_llave_natural": 0,
+    "nulos_id_mesa": 0,
+    "nulos_votos": 0,
+    "votos_negativos": 0
+  },
+  "geografia": {
+    "estados_cruce": {
+      "REQUIERE_VALIDACION": 102,
+      "EXACTO": 100,
+      "NO_ENCONTRADO": 15,
+      "ESPACIAL": 4
+    },
+    "puestos_con_coord": 206,
+    "puestos_sin_coord": 15,
+    "puestos_fuera_bbox_cali": 7,
+    "mun_dane_exactos": 42,
+    "mun_dane_total": 42,
+    "geojson": {
+      "cali_comunas": {
+        "n": 22,
+        "esperado": 22,
+        "ok": true
+      },
+      "cali_corregimientos": {
+        "n": 15,
+        "esperado": 15,
+        "ok": true
+      },
+      "valle_municipios": {
+        "n": 42,
+        "esperado": 42,
+        "ok": true
+      },
+      "cali_puestos": {
+        "n": 206,
+        "esperado": 206,
+        "ok": true
+      }
+    }
+  },
+  "rendimiento": {
+    "docs_total_bytes": 14533083,
+    "data_bytes": 13882164,
+    "geo_bytes": 621241,
+    "n_archivos": 291,
+    "mayores": [
+      [
+        "data/puesto/76001.json",
+        929719
+      ],
+      [
+        "data/municipio/resultados.json",
+        889811
+      ],
+      [
+        "data/zona/competencia.json",
+        813096
+      ],
+      [
+        "data/cali/comuna_resultados.json",
+        543393
+      ],
+      [
+        "geo/valle_municipios.geojson",
+        372276
+      ],
+      [
+        "data/puesto/76520.json",
+        358739
+      ]
+    ],
+    "carga_inicial_bytes": 612083
+  },
+  "manifest": {
+    "manifest_archivos": 279,
+    "manifest_faltantes": [],
+    "estructura_faltantes": [],
+    "puesto_faltantes": []
+  }
+}

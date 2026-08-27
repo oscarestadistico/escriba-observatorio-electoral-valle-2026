@@ -1,0 +1,9 @@
+data_raw/
+data_intermediate/
+data_processed/*.parquet
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*.zip
+!docs/**

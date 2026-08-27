@@ -1,0 +1,10 @@
+{
+  "proyecto": "OBSERVATORIO ELECTORAL VALLE 2026",
+  "fecha_corte": "2026-08-26",
+  "crs_web": "EPSG:4326",
+  "crs_cali_original": "EPSG:6249",
+  "crs_dane_original": "EPSG:4686",
+  "universo_agregacion": "archivos VALLE (incluyen Cali a nivel mesa)",
+  "sitio": "docs/",
+  "publicacion": "GitHub Pages (rama main, carpeta /docs)"
+}

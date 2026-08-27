@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Observatorio Electoral Valle del Cauca 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="loadbar" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="eyebrow">Observatorio electoral · datos agregados</span>
+    <h1>Valle del Cauca <span class="yr">2026</span></h1>
+    <p class="sub">Presidencia · Senado · Cámara — resultados territoriales</p>
+  </div>
+  <div class="ctxwrap">
+    <span class="eyebrow">Vista actual</span>
+    <div id="ctx" class="ctx">—</div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <button data-tab="valle" class="active">Panorama Valle</button>
+  <button data-tab="presidencia">Presidencia</button>
+  <button data-tab="congreso">Congreso</button>
+  <button data-tab="cali">Cali</button>
+  <button data-tab="explorador">Explorador</button>
+  <button data-tab="datos">Sobre los datos</button>
+</nav>
+
+<main id="app">
+  <section id="tab-valle" class="tab-panel active">
+    <div class="controls" id="ctrl-valle"></div>
+    <div class="kpis" id="kpi-valle"></div>
+    <div class="grid-2">
+      <div class="card"><span class="eyebrow">Cartografía</span><h3>Mapa municipal — ganador</h3>
+        <div id="map-valle" class="map"></div>
+        <div class="legend" id="leg-valle"></div>
+        <p class="note" id="map-valle-note"></p></div>
+      <div class="card"><span class="eyebrow">Ordenamiento</span><h3>Ranking municipal</h3>
+        <div id="rank-valle" class="tablewrap"></div></div>
+    </div>
+    <div class="card"><span class="eyebrow">Agregado departamental</span><h3>Resultado en el Valle</h3>
+      <div id="bar-valle" class="chart"></div></div>
+  </section>
+
+  <section id="tab-presidencia" class="tab-panel">
+    <div class="controls" id="ctrl-pres"></div>
+    <div class="kpis" id="kpi-pres"></div>
+    <div class="grid-2">
+      <div class="card"><span class="eyebrow">Votación</span><h3>Por candidato (Valle)</h3>
+        <div id="bar-pres" class="chart"></div>
+        <div class="legend" id="leg-pres"></div></div>
+      <div class="card"><span class="eyebrow">Comparación entre vueltas</span><h3>Cambio agregado 1V→2V por municipio</h3>
+        <div id="chg-pres" class="chart"></div>
+        <p class="note">Cambio agregado entre resultados territoriales; no es transferencia de votos.</p></div>
+    </div>
+    <div class="card"><span class="eyebrow">Cartografía</span><h3>Ganador presidencial por municipio</h3>
+      <div id="map-pres" class="map"></div></div>
+  </section>
+
+  <section id="tab-congreso" class="tab-panel">
+    <div class="controls" id="ctrl-cong"></div>
+    <div class="kpis" id="kpi-cong"></div>
+    <div class="card"><span class="eyebrow">Votación por lista</span><h3>Partidos y listas (Valle)</h3>
+      <div id="bar-cong" class="chart"></div>
+      <div class="legend" id="leg-cong"></div></div>
+    <div class="grid-2">
+      <div class="card"><span class="eyebrow">Estructura de competencia</span><h3>Concentración y fragmentación</h3>
+        <div id="frag-cong" class="tablewrap"></div></div>
+      <div class="card"><span class="eyebrow">Ordenamiento</span><h3>Ganador por municipio</h3>
+        <div id="rank-cong" class="tablewrap"></div></div>
+    </div>
+  </section>
+
+  <section id="tab-cali" class="tab-panel">
+    <div class="controls" id="ctrl-cali"></div>
+    <p class="warn" id="cali-warn"></p>
+    <div class="grid-2">
+      <div class="card"><span class="eyebrow">Cartografía urbana</span><h3>Ganador por comuna</h3>
+        <div id="map-cali" class="map"></div>
+        <div class="legend" id="leg-cali"></div></div>
+      <div class="card"><span class="eyebrow">Ordenamiento</span><h3>Ranking territorial</h3>
+        <div id="rank-cali" class="tablewrap"></div></div>
+    </div>
+    <div class="card"><span class="eyebrow">Agregado urbano</span><h3>Resultado por comuna</h3>
+      <div id="bar-cali" class="chart"></div></div>
+  </section>
+
+  <section id="tab-explorador" class="tab-panel">
+    <span class="eyebrow">Consulta trazable · zona → puesto → mesa</span>
+    <div class="controls" id="ctrl-exp"></div>
+    <div class="card"><div id="exp-result" class="tablewrap">
+      <p class="note">Seleccione municipio → zona → puesto → mesa.</p></div></div>
+  </section>
+
+  <section id="tab-datos" class="tab-panel">
+    <div class="card"><span class="eyebrow">Procedencia y límites</span><h3>Sobre los datos</h3>
+      <div id="datos-info"></div></div>
+  </section>
+</main>
+
+<footer class="foot"><p id="foot-text">Cargando…</p></footer>
+
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

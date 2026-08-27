@@ -1,0 +1,990 @@
+{
+  "proyecto": "OBSERVATORIO ELECTORAL VALLE DEL CAUCA 2026",
+  "loop": 0,
+  "zips_originales": [
+    {
+      "archivo": "2025-12-19_22-30-38_btm6h8dls3mlfdrrlsu2duhbfr.zip",
+      "bytes": 108247,
+      "tamano": "105.7 KB",
+      "sha256": "9441ca0e495171d06c0f30fac3813858453a9145b09a494ee2214b05fb3247e4"
+    },
+    {
+      "archivo": "2025-12-19_22-31-54_btm6h8dls3mlfdrrlsu2duhbfr.zip",
+      "bytes": 281658,
+      "tamano": "275.1 KB",
+      "sha256": "4430c69e058571fb52e3205130a3ffacd33f8fc4d28a9341352d71e2df2b8a54"
+    },
+    {
+      "archivo": "2025-12-19_22-37-47_btm6h8dls3mlfdrrlsu2duhbfr.zip",
+      "bytes": 580194,
+      "tamano": "566.6 KB",
+      "sha256": "8eeb5568af773f07718ffbe10b83e8a69623a70aa6de9c019c935a2f46e5ad6f"
+    },
+    {
+      "archivo": "2026-08-26_21-04-02_sk7iipe4j7v2u7jta0uc72mmcm.zip",
+      "bytes": 10378,
+      "tamano": "10.1 KB",
+      "sha256": "d8f8139d5d4c04c8d055100fbd2396a6f422257a6f383ed5b72baa4c5ba649e1"
+    },
+    {
+      "archivo": "2026-08-26_21-04-38_sk7iipe4j7v2u7jta0uc72mmcm.zip",
+      "bytes": 108174,
+      "tamano": "105.6 KB",
+      "sha256": "7020a0f01e19b842973b021699b60d3bf274ae71ea40f41953577145fdc0c90b"
+    },
+    {
+      "archivo": "Bases_elecciones_2026.zip",
+      "bytes": 12643674,
+      "tamano": "12.1 MB",
+      "sha256": "1b57a095ef3a04c6ef41aee90b2c7b6212a22ddcce0b5ba10d823313b28e813c"
+    },
+    {
+      "archivo": "MMV_Presidente1V_2026.zip",
+      "bytes": 16348265,
+      "tamano": "15.6 MB",
+      "sha256": "e8623fdc10d0f0a37ffb984e477f26ce8315759596fdc7837729de86e9215642"
+    },
+    {
+      "archivo": "MMV_Presidente2V_2026.zip",
+      "bytes": 6428218,
+      "tamano": "6.1 MB",
+      "sha256": "ebc9d117c750882b7078fc384845bb0265c5b109b7af99785b6675fd0ebeeac7"
+    },
+    {
+      "archivo": "SHP_MGN2018_INTGRD_DEPTO.zip",
+      "bytes": 11879741,
+      "tamano": "11.3 MB",
+      "sha256": "62766b1f9d179b1626a8745c5830cfa9cad38263d105262db90db075960e3156"
+    },
+    {
+      "archivo": "SHP_MGN2018_INTGRD_MPIO__1_.zip",
+      "bytes": 66719928,
+      "tamano": "63.6 MB",
+      "sha256": "c9d4a891e1cb773244c7fd52afc6dca0b92a250db8d5386ff02baa9e5eaa5ad3"
+    }
+  ],
+  "csv": [
+    {
+      "archivo": "Senado y Camara Cali.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 511062,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 1,
+        "MUNNOMBRE": 1,
+        "ZONA": 36,
+        "PUESTO": 30,
+        "MESA": 78,
+        "COMUCODIGO": 1,
+        "COMUNOMBRE": 1,
+        "CORCODIGO": 3,
+        "CORNOMBRE": 3,
+        "CIR": 4,
+        "PAR": 88,
+        "PARNOMBRE": 84,
+        "CAN": 126,
+        "CANNOMBRE": 1151
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001"
+      ],
+      "n_municipios": 1,
+      "n_zonas": 36,
+      "n_puestos": 30,
+      "n_mesas": 78,
+      "n_partidos": 88,
+      "n_candidatos": 126,
+      "zona99_corregimiento_filas": 14930,
+      "cir_valores": [
+        "0",
+        "1",
+        "4",
+        "5"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO NACIONAL",
+        "997": "VOTOS NULOS NACIONAL",
+        "998": "VOTOS NO MARCADOS NACIONAL"
+      },
+      "comunombre_muestra": [
+        "NACIONAL"
+      ],
+      "cornombre_muestra": [
+        "CAMARA",
+        "CONSULTAS",
+        "SENADO"
+      ],
+      "sha256": "8d876225b0890438369cf6f21638935554936c99b2984c47a672cb186e339244",
+      "bytes": 81039006
+    },
+    {
+      "archivo": "Senado y Camara Valle.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 1011579,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 42,
+        "MUNNOMBRE": 42,
+        "ZONA": 37,
+        "PUESTO": 81,
+        "MESA": 78,
+        "COMUCODIGO": 3,
+        "COMUNOMBRE": 3,
+        "CORCODIGO": 3,
+        "CORNOMBRE": 3,
+        "CIR": 4,
+        "PAR": 88,
+        "PARNOMBRE": 84,
+        "CAN": 126,
+        "CANNOMBRE": 1155
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001",
+        "004",
+        "007",
+        "010",
+        "013",
+        "016"
+      ],
+      "n_municipios": 42,
+      "n_zonas": 37,
+      "n_puestos": 81,
+      "n_mesas": 78,
+      "n_partidos": 88,
+      "n_candidatos": 126,
+      "zona99_corregimiento_filas": 110746,
+      "cir_valores": [
+        "0",
+        "1",
+        "4",
+        "5"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO NACIONAL",
+        "997": "VOTOS NULOS NACIONAL",
+        "998": "VOTOS NO MARCADOS NACIONAL"
+      },
+      "comunombre_muestra": [
+        "CIRCUNSCRIPCIÓN 1 (CAUCA- NARI",
+        "CIRCUNSCRIPCIÓN 9 (CAUCA - VAL",
+        "NACIONAL"
+      ],
+      "cornombre_muestra": [
+        "CAMARA",
+        "CONSULTAS",
+        "SENADO"
+      ],
+      "sha256": "bdccf1f67a7605ad3639f637f472bb7bff3162bc761f9a25a3c07d8d8cf1fe9c",
+      "bytes": 162007532
+    },
+    {
+      "archivo": "Presidenciales 2026 PV CALI.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 40437,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 1,
+        "MUNNOMBRE": 1,
+        "ZONA": 36,
+        "PUESTO": 30,
+        "MESA": 79,
+        "COMUCODIGO": 38,
+        "COMUNOMBRE": 38,
+        "CORCODIGO": 1,
+        "CORNOMBRE": 1,
+        "CIR": 1,
+        "PAR": 14,
+        "PARNOMBRE": 14,
+        "CAN": 16,
+        "CANNOMBRE": 16
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001"
+      ],
+      "n_municipios": 1,
+      "n_zonas": 36,
+      "n_puestos": 30,
+      "n_mesas": 79,
+      "n_partidos": 14,
+      "n_candidatos": 16,
+      "zona99_corregimiento_filas": 1400,
+      "cir_valores": [
+        "0"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO",
+        "997": "VOTOS NULOS",
+        "998": "VOTOS NO MARCADOS"
+      },
+      "comunombre_muestra": [
+        "COMUNA 1",
+        "COMUNA 10",
+        "COMUNA 11",
+        "COMUNA 12",
+        "COMUNA 13",
+        "COMUNA 14",
+        "COMUNA 15",
+        "COMUNA 16"
+      ],
+      "cornombre_muestra": [
+        "PRESIDENTE"
+      ],
+      "sha256": "64116d55ffcb60943f4ed2f201b03ce4136c0cffc8b0c3ec6b0a2d699589ced4",
+      "bytes": 6227568
+    },
+    {
+      "archivo": "Presidenciales 2026 PV VALLE.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 86885,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 42,
+        "MUNNOMBRE": 42,
+        "ZONA": 37,
+        "PUESTO": 81,
+        "MESA": 79,
+        "COMUCODIGO": 38,
+        "COMUNOMBRE": 100,
+        "CORCODIGO": 1,
+        "CORNOMBRE": 1,
+        "CIR": 1,
+        "PAR": 12,
+        "PARNOMBRE": 12,
+        "CAN": 14,
+        "CANNOMBRE": 14
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001",
+        "004",
+        "007",
+        "010",
+        "013",
+        "016"
+      ],
+      "n_municipios": 42,
+      "n_zonas": 37,
+      "n_puestos": 81,
+      "n_mesas": 79,
+      "n_partidos": 12,
+      "n_candidatos": 14,
+      "zona99_corregimiento_filas": 12795,
+      "cir_valores": [
+        "0"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO",
+        "997": "VOTOS NULOS",
+        "998": "VOTOS NO MARCADOS"
+      },
+      "comunombre_muestra": [
+        "COMUNA 1",
+        "COMUNA 10",
+        "COMUNA 11",
+        "COMUNA 12",
+        "COMUNA 13",
+        "COMUNA 14",
+        "COMUNA 15",
+        "COMUNA 16"
+      ],
+      "cornombre_muestra": [
+        "PRESIDENTE"
+      ],
+      "sha256": "81a17e19793d30e6b80534737aead98fb00c3ed2b30ad3888848e2f1ed25728e",
+      "bytes": 13437896
+    },
+    {
+      "archivo": "Presidenciales 2026 SV  VALLE.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 41675,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 42,
+        "MUNNOMBRE": 42,
+        "ZONA": 37,
+        "PUESTO": 81,
+        "MESA": 79,
+        "COMUCODIGO": 38,
+        "COMUNOMBRE": 100,
+        "CORCODIGO": 1,
+        "CORNOMBRE": 1,
+        "CIR": 1,
+        "PAR": 3,
+        "PARNOMBRE": 3,
+        "CAN": 5,
+        "CANNOMBRE": 5
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001",
+        "004",
+        "007",
+        "010",
+        "013",
+        "016"
+      ],
+      "n_municipios": 42,
+      "n_zonas": 37,
+      "n_puestos": 81,
+      "n_mesas": 79,
+      "n_partidos": 3,
+      "n_candidatos": 5,
+      "zona99_corregimiento_filas": 6179,
+      "cir_valores": [
+        "0"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO",
+        "997": "VOTOS NULOS",
+        "998": "VOTOS NO MARCADOS"
+      },
+      "comunombre_muestra": [
+        "COMUNA 1",
+        "COMUNA 10",
+        "COMUNA 11",
+        "COMUNA 12",
+        "COMUNA 13",
+        "COMUNA 14",
+        "COMUNA 15",
+        "COMUNA 16"
+      ],
+      "cornombre_muestra": [
+        "PRESIDENTE"
+      ],
+      "sha256": "f71ff96f58ab333bbe7981190abb74537f138c463365a6e02231c1fd0d682814",
+      "bytes": 6187823
+    },
+    {
+      "archivo": "Presidenciales 2026 SV CALI.csv",
+      "encoding": "utf-8",
+      "separador": ";",
+      "filas": 19128,
+      "columnas": 19,
+      "campos": [
+        "DEP",
+        "DEPNOMBRE",
+        "MUN",
+        "MUNNOMBRE",
+        "ZONA",
+        "PUESTO",
+        "PUESNOMBRE",
+        "MESA",
+        "COMUCODIGO",
+        "COMUNOMBRE",
+        "CORCODIGO",
+        "CORNOMBRE",
+        "CIR",
+        "PAR",
+        "PARNOMBRE",
+        "CAN",
+        "CANCEDULA",
+        "CANNOMBRE",
+        "VOTOS"
+      ],
+      "distintos": {
+        "DEP": 1,
+        "DEPNOMBRE": 1,
+        "MUN": 1,
+        "MUNNOMBRE": 1,
+        "ZONA": 36,
+        "PUESTO": 30,
+        "MESA": 79,
+        "COMUCODIGO": 38,
+        "COMUNOMBRE": 38,
+        "CORCODIGO": 1,
+        "CORNOMBRE": 1,
+        "CIR": 1,
+        "PAR": 3,
+        "PARNOMBRE": 3,
+        "CAN": 5,
+        "CANNOMBRE": 5
+      },
+      "DEP_valores": [
+        "31"
+      ],
+      "muestra_MUN": [
+        "001"
+      ],
+      "n_municipios": 1,
+      "n_zonas": 36,
+      "n_puestos": 30,
+      "n_mesas": 79,
+      "n_partidos": 3,
+      "n_candidatos": 5,
+      "zona99_corregimiento_filas": 655,
+      "cir_valores": [
+        "0"
+      ],
+      "votos_no_numericos": 0,
+      "votos_negativos": 0,
+      "votos_nulos": 0,
+      "candidatos_codigos_especiales": {
+        "996": "VOTOS EN BLANCO",
+        "997": "VOTOS NULOS",
+        "998": "VOTOS NO MARCADOS"
+      },
+      "comunombre_muestra": [
+        "COMUNA 1",
+        "COMUNA 10",
+        "COMUNA 11",
+        "COMUNA 12",
+        "COMUNA 13",
+        "COMUNA 14",
+        "COMUNA 15",
+        "COMUNA 16"
+      ],
+      "cornombre_muestra": [
+        "PRESIDENTE"
+      ],
+      "sha256": "45d8b7d348ed86c790f953a5edd786167f1c0c4667f565a2ba3becc582b4f722",
+      "bytes": 2818704
+    }
+  ],
+  "cartografia": [
+    {
+      "archivo": "Perimetro_municipal.shp",
+      "n_features": 1,
+      "crs": "EPSG:6249",
+      "campos": [
+        "id_munici",
+        "nombre"
+      ],
+      "geom_types": [
+        "Polygon"
+      ],
+      "bounds": [
+        1041160.1866,
+        853724.1243,
+        1068760.9282,
+        884159.2356
+      ],
+      "sha256": "1eb9158ffee6513e111eff5cd161a9b890c4c14327bfa319d6da28be6f07eb4e",
+      "bytes": 173932
+    },
+    {
+      "archivo": "Comunas.shp",
+      "n_features": 22,
+      "crs": "EPSG:6249",
+      "campos": [
+        "comuna",
+        "shape_leng",
+        "shape_area",
+        "nombre"
+      ],
+      "geom_types": [
+        "Polygon"
+      ],
+      "bounds": [
+        1054753.4609,
+        860192.0554,
+        1068491.8894,
+        879441.4559
+      ],
+      "sha256": "dd279e5253d96dfd796b34fbadf546cff6c3b07c3fc847d4569291be7c47d7ec",
+      "bytes": 478836
+    },
+    {
+      "archivo": "Corregimientos.shp",
+      "n_features": 15,
+      "crs": "EPSG:6249",
+      "campos": [
+        "id_correg",
+        "shape_leng",
+        "shape_area",
+        "corregimie",
+        "acuerdo"
+      ],
+      "geom_types": [
+        "Polygon"
+      ],
+      "bounds": [
+        1041160.1866,
+        853724.1243,
+        1068760.9282,
+        884159.2356
+      ],
+      "sha256": "0dc9bef77b93cd1d8c2b2ab777531f92353d95d7af9a6c63fa850d6edc07b4f0",
+      "bytes": 936108
+    },
+    {
+      "archivo": "2026-08-26_21-04-02_sk7iipe4j7v2u7jta0uc72mmcm\\Puestos_votacion.shp",
+      "n_features": 206,
+      "crs": "EPSG:6249",
+      "campos": [
+        "codigo",
+        "nombre",
+        "barrio",
+        "comuna"
+      ],
+      "geom_types": [
+        "Point"
+      ],
+      "bounds": [
+        1049253.59052,
+        858048.82738,
+        1068257.8097,
+        881059.94476
+      ],
+      "sha256": "026b71f3654c01d6c19f91240ac3df4afc8013c4c052bf0160748e6c812bd36a",
+      "bytes": 5868
+    },
+    {
+      "archivo": "2026-08-26_21-04-38_sk7iipe4j7v2u7jta0uc72mmcm\\pdt_dpa_perimetro_municipal.shp",
+      "n_features": 1,
+      "crs": "EPSG:6249",
+      "campos": [
+        "pmucod",
+        "pmunombre",
+        "pmuorden1",
+        "pmuorden2"
+      ],
+      "geom_types": [
+        "Polygon"
+      ],
+      "bounds": [
+        1041160.1866,
+        853724.1243,
+        1068760.9282,
+        884159.2356
+      ],
+      "sha256": "ba901ea213c1e6917e795ebf30ff12048c747d34060c58c9db4e7297982d5120",
+      "bytes": 173964
+    },
+    {
+      "archivo": "MGN_ANM_DPTOS.shp",
+      "n_features": 33,
+      "crs": "EPSG:4686",
+      "campos": [
+        "DPTO_CCDGO",
+        "DPTO_CNMBR",
+        "VERSION",
+        "AREA",
+        "LATITUD",
+        "LONGITUD",
+        "STCTNENCUE",
+        "STP3_1_SI",
+        "STP3_2_NO",
+        "STP3A_RI",
+        "STP3B_TCN",
+        "STP4_1_SI",
+        "STP4_2_NO",
+        "STP9_1_USO",
+        "STP9_2_USO",
+        "STP9_3_USO",
+        "STP9_4_USO",
+        "STP9_2_1_M",
+        "STP9_2_2_M",
+        "STP9_2_3_M",
+        "STP9_2_4_M",
+        "STP9_2_9_M",
+        "STP9_3_1_N",
+        "STP9_3_2_N",
+        "STP9_3_3_N",
+        "STP9_3_4_N",
+        "STP9_3_5_N",
+        "STP9_3_6_N",
+        "STP9_3_7_N",
+        "STP9_3_8_N",
+        "STP9_3_9_N",
+        "STP9_3_10",
+        "STP9_3_99",
+        "STVIVIENDA",
+        "STP14_1_TI",
+        "STP14_2_TI",
+        "STP14_3_TI",
+        "STP14_4_TI",
+        "STP14_5_TI",
+        "STP14_6_TI",
+        "STP15_1_OC",
+        "STP15_2_OC",
+        "STP15_3_OC",
+        "STP15_4_OC",
+        "TSP16_HOG",
+        "STP19_EC_1",
+        "STP19_ES_2",
+        "STP19_EE_1",
+        "STP19_EE_2",
+        "STP19_EE_3",
+        "STP19_EE_4",
+        "STP19_EE_5",
+        "STP19_EE_6",
+        "STP19_EE_9",
+        "STP19_ACU1",
+        "STP19_ACU2",
+        "STP19_ALC1",
+        "STP19_ALC2",
+        "STP19_GAS1",
+        "STP19_GAS2",
+        "STP19_GAS9",
+        "STP19_REC1",
+        "STP19_REC2",
+        "STP19_INT1",
+        "STP19_INT2",
+        "STP19_INT9",
+        "STP27_PERS",
+        "STPERSON_L",
+        "STPERSON_S",
+        "STP32_1_SE",
+        "STP32_2_SE",
+        "STP34_1_ED",
+        "STP34_2_ED",
+        "STP34_3_ED",
+        "STP34_4_ED",
+        "STP34_5_ED",
+        "STP34_6_ED",
+        "STP34_7_ED",
+        "STP34_8_ED",
+        "STP34_9_ED",
+        "STP51_PRIM",
+        "STP51_SECU",
+        "STP51_SUPE",
+        "STP51_POST",
+        "STP51_13_E",
+        "STP51_99_E",
+        "Shape_Leng",
+        "Shape_Area"
+      ],
+      "geom_types": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "bounds": [
+        -81.73562,
+        -4.22941,
+        -66.84722,
+        13.39473
+      ],
+      "sha256": "e59f6aed0cdf2194fcc6e84bd4052c9501e665521475889f0ecd9e7674121a4c",
+      "bytes": 16239068
+    },
+    {
+      "archivo": "MGN_ANM_MPIOS.shp",
+      "n_features": 1122,
+      "crs": "EPSG:4686",
+      "campos": [
+        "DPTO_CCDGO",
+        "MPIO_CCDGO",
+        "MPIO_CNMBR",
+        "MPIO_CDPMP",
+        "VERSION",
+        "AREA",
+        "LATITUD",
+        "LONGITUD",
+        "STCTNENCUE",
+        "STP3_1_SI",
+        "STP3_2_NO",
+        "STP3A_RI",
+        "STP3B_TCN",
+        "STP4_1_SI",
+        "STP4_2_NO",
+        "STP9_1_USO",
+        "STP9_2_USO",
+        "STP9_3_USO",
+        "STP9_4_USO",
+        "STP9_2_1_M",
+        "STP9_2_2_M",
+        "STP9_2_3_M",
+        "STP9_2_4_M",
+        "STP9_2_9_M",
+        "STP9_3_1_N",
+        "STP9_3_2_N",
+        "STP9_3_3_N",
+        "STP9_3_4_N",
+        "STP9_3_5_N",
+        "STP9_3_6_N",
+        "STP9_3_7_N",
+        "STP9_3_8_N",
+        "STP9_3_9_N",
+        "STP9_3_10",
+        "STP9_3_99",
+        "STVIVIENDA",
+        "STP14_1_TI",
+        "STP14_2_TI",
+        "STP14_3_TI",
+        "STP14_4_TI",
+        "STP14_5_TI",
+        "STP14_6_TI",
+        "STP15_1_OC",
+        "STP15_2_OC",
+        "STP15_3_OC",
+        "STP15_4_OC",
+        "TSP16_HOG",
+        "STP19_EC_1",
+        "STP19_ES_2",
+        "STP19_EE_1",
+        "STP19_EE_2",
+        "STP19_EE_3",
+        "STP19_EE_4",
+        "STP19_EE_5",
+        "STP19_EE_6",
+        "STP19_EE_9",
+        "STP19_ACU1",
+        "STP19_ACU2",
+        "STP19_ALC1",
+        "STP19_ALC2",
+        "STP19_GAS1",
+        "STP19_GAS2",
+        "STP19_GAS9",
+        "STP19_REC1",
+        "STP19_REC2",
+        "STP19_INT1",
+        "STP19_INT2",
+        "STP19_INT9",
+        "STP27_PERS",
+        "STPERSON_L",
+        "STPERSON_S",
+        "STP32_1_SE",
+        "STP32_2_SE",
+        "STP34_1_ED",
+        "STP34_2_ED",
+        "STP34_3_ED",
+        "STP34_4_ED",
+        "STP34_5_ED",
+        "STP34_6_ED",
+        "STP34_7_ED",
+        "STP34_8_ED",
+        "STP34_9_ED",
+        "STP51_PRIM",
+        "STP51_SECU",
+        "STP51_SUPE",
+        "STP51_POST",
+        "STP51_13_E",
+        "STP51_99_E",
+        "Shape_Leng",
+        "Shape_Area"
+      ],
+      "geom_types": [
+        "MultiPolygon",
+        "Polygon"
+      ],
+      "bounds": [
+        -81.73562,
+        -4.22941,
+        -66.84722,
+        13.39473
+      ],
+      "sha256": "16ff55d8675e00ead8f575436f76cb9d49e09cbfaa04ac45733d52507e122bb4",
+      "bytes": 91869332
+    }
+  ],
+  "otros": [
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/ARCHIVOSBASICOS_AUDITORES_PRESIDENTE_2026_V3.zip",
+      "bytes": 2143812,
+      "tamano": "2.0 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/Estructuras Basicas (1808).pdf",
+      "bytes": 173191,
+      "tamano": "169.1 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/HASH_PRE1v_MMV_9999_PRECONTEO.txt",
+      "bytes": 1428,
+      "tamano": "1.4 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/HASH_ficheros_MMV_4_MMV_9999_ESCRUTINIO.txt",
+      "bytes": 1452,
+      "tamano": "1.4 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/Novedad20260603.zip",
+      "bytes": 2118630,
+      "tamano": "2.0 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/PRE1v_MMV_9999_PRECONTEO.txt",
+      "bytes": 59180240,
+      "tamano": "56.4 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente1V_2026/MMV_Presidente1V_2026/MMV_Presidente1V_2026/_ficheros_MMV_4_MMV_9999_ESCRUTINIO.csv",
+      "bytes": 105425280,
+      "tamano": "100.5 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/ArchivosBasicosAuditores_presidente2026_2v.zip",
+      "bytes": 313345,
+      "tamano": "306.0 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/Estructuras Basicas (1808).pdf",
+      "bytes": 173191,
+      "tamano": "169.1 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/HASH_PRE2v_MMV_9999_PRECONTEO.txt",
+      "bytes": 1428,
+      "tamano": "1.4 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/HASH_ficheros_MMV_4_MMV_9999_ESCRUTINIO.txt",
+      "bytes": 1428,
+      "tamano": "1.4 KB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/Novedad20260623.zip",
+      "bytes": 1647082,
+      "tamano": "1.6 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/PRE2v_MMV_9999_PRECONTEO.txt",
+      "bytes": 21666320,
+      "tamano": "20.7 MB"
+    },
+    {
+      "archivo": "raw_MMV_Presidente2V_2026/MMV_Presidente2V_2026/_ficheros_MMV_4_MMV_9999_ESCRUTINIO.csv",
+      "bytes": 32945400,
+      "tamano": "31.4 MB"
+    }
+  ]
+}

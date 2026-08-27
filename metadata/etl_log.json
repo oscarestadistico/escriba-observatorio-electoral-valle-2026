@@ -1,0 +1,43 @@
+{
+  "archivos": {
+    "Presidenciales 2026 PV CALI.csv": {
+      "filas": 40437,
+      "votos": 1066623
+    },
+    "Presidenciales 2026 PV VALLE.csv": {
+      "filas": 86885,
+      "votos": 2137681
+    },
+    "Presidenciales 2026 SV CALI.csv": {
+      "filas": 19128,
+      "votos": 1151118
+    },
+    "Presidenciales 2026 SV  VALLE.csv": {
+      "filas": 41675,
+      "votos": 2328281
+    },
+    "Senado y Camara Cali.csv": {
+      "filas": 511062,
+      "votos": 2028622
+    },
+    "Senado y Camara Valle.csv": {
+      "filas": 1011579,
+      "votos": 4173461
+    }
+  },
+  "corporacion_conteo": {
+    "Presidencia": 188125,
+    "Senado": 654360,
+    "Cámara": 695970,
+    "Consultas": 172311
+  },
+  "territorio_fuente_tipo_conteo": {
+    "comuna": 135146,
+    "corregimiento": 5941,
+    "nacional_especial": 40547,
+    "otro": 6491,
+    "no_geografico_congreso": 1522641
+  },
+  "nota": "ZONA no es clasificador territorial: una comuna abarca varias ZONA (23-37 -> COMUNA 15-22) y hay ZONA=99 con etiqueta de comuna. Territorio en Presidencia proviene de COMUNOMBRE; en Congreso se reconstruye en LOOP 2.",
+  "total_filas": 1710766
+}

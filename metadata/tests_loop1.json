@@ -1,0 +1,25 @@
+{
+  "loop": 1,
+  "total": 13,
+  "passed": 13,
+  "failed": 0,
+  "test_integridad": [
+    "conteo_total",
+    "sin_nulos_llaves",
+    "votos_enteros_no_neg",
+    "ceros_izquierda",
+    "corporacion_valida",
+    "territorio_fuente_tipo_valido"
+  ],
+  "test_totales": [
+    "votos_por_archivo_reconcilian",
+    "cali_subconjunto_de_valle",
+    "valle_42_municipios"
+  ],
+  "test_geografia": [
+    "comuna_fuente_refleja_comunombre",
+    "corregimiento_fuente_refleja_comunombre",
+    "congreso_sin_geografia",
+    "zona_no_es_clasificador_territorial"
+  ]
+}

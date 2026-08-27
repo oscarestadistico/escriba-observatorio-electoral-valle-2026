@@ -1,0 +1,14 @@
+archivo,eleccion,corporacion,vuelta,nivel,tipo_fuente,fecha,filas,columnas,hash,estado,observaciones
+Senado y Camara Cali.csv,Congreso 2026,Senado+Camara,NA,Cali,base_procesada_csv,2026,511062,19,8d876225b0890438,AUDITADO,sep=; enc=utf-8
+Senado y Camara Valle.csv,Congreso 2026,Senado+Camara,NA,Valle,base_procesada_csv,2026,1011579,19,bdccf1f67a7605ad,AUDITADO,sep=; enc=utf-8
+Presidenciales 2026 PV CALI.csv,Presidencia 2026,Presidencia,1V,Cali,base_procesada_csv,2026,40437,19,64116d55ffcb6094,AUDITADO,sep=; enc=utf-8
+Presidenciales 2026 PV VALLE.csv,Presidencia 2026,Presidencia,1V,Valle,base_procesada_csv,2026,86885,19,81a17e19793d30e6,AUDITADO,sep=; enc=utf-8
+Presidenciales 2026 SV  VALLE.csv,Presidencia 2026,Presidencia,2V,Valle,base_procesada_csv,2026,41675,19,f71ff96f58ab333b,AUDITADO,sep=; enc=utf-8
+Presidenciales 2026 SV CALI.csv,Presidencia 2026,Presidencia,2V,Cali,base_procesada_csv,2026,19128,19,45d8b7d348ed86c7,AUDITADO,sep=; enc=utf-8
+Perimetro_municipal.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,1,2,1eb9158ffee6513e,AUDITADO,crs=EPSG:6249
+Comunas.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,22,4,dd279e5253d96dfd,AUDITADO,crs=EPSG:6249
+Corregimientos.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,15,5,0dc9bef77b93cd1d,AUDITADO,crs=EPSG:6249
+2026-08-26_21-04-02_sk7iipe4j7v2u7jta0uc72mmcm\Puestos_votacion.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,206,4,026b71f3654c01d6,AUDITADO,crs=EPSG:6249
+2026-08-26_21-04-38_sk7iipe4j7v2u7jta0uc72mmcm\pdt_dpa_perimetro_municipal.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,1,4,ba901ea213c1e691,AUDITADO,crs=EPSG:6249
+MGN_ANM_DPTOS.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,33,88,e59f6aed0cdf2194,AUDITADO,crs=EPSG:4686
+MGN_ANM_MPIOS.shp,NA,NA,NA,cartografia,shapefile,MGN2018/2025-2026,1122,90,16ff55d8675e00ea,AUDITADO,crs=EPSG:4686
