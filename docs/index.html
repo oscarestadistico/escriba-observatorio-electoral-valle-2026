@@ -6,7 +6,7 @@
 <title>Observatorio Electoral Valle del Cauca 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,10 +14,13 @@
 <div id="loadbar" aria-hidden="true"></div>
 
 <header class="topbar">
-  <div class="brand">
-    <span class="eyebrow">Observatorio electoral · datos agregados</span>
-    <h1>Valle del Cauca <span class="yr">2026</span></h1>
-    <p class="sub">Presidencia · Senado · Cámara — resultados territoriales</p>
+  <div class="brand-row">
+    <img class="brand-logo" src="assets/impacto.svg" alt="IMPACTO">
+    <div class="brand">
+      <span class="eyebrow">Observatorio electoral · datos agregados</span>
+      <h1>Valle del Cauca <span class="yr">2026</span></h1>
+      <p class="sub">Presidencia · Senado · Cámara — resultados territoriales</p>
+    </div>
   </div>
   <div class="ctxwrap">
     <span class="eyebrow">Vista actual</span>
@@ -31,6 +34,7 @@
   <button data-tab="congreso">Congreso</button>
   <button data-tab="cali">Cali</button>
   <button data-tab="explorador">Explorador</button>
+  <button data-tab="lectura">Lectura analítica</button>
   <button data-tab="datos">Sobre los datos</button>
 </nav>
 
@@ -98,6 +102,17 @@
     <div class="controls" id="ctrl-exp"></div>
     <div class="card"><div id="exp-result" class="tablewrap">
       <p class="note">Seleccione municipio → zona → puesto → mesa.</p></div></div>
+  </section>
+
+  <section id="tab-lectura" class="tab-panel">
+    <span class="eyebrow">Lectura estratégica · descriptiva y agregada</span>
+    <div class="controls" id="ctrl-lect"></div>
+    <p class="note" style="margin-top:0">Genera una lectura de los indicadores del territorio seleccionado. Es un insumo <b>descriptivo</b> para la discusión estratégica del equipo; no infiere comportamiento individual, no dirige mensajes a comunidades ni convierte correlación en causalidad.</p>
+    <div style="margin:6px 0 4px"><button id="btn-lectura" class="btn-primary">Generar lectura</button></div>
+    <div class="card"><span class="eyebrow">Lectura del territorio</span><h3 id="lect-title">—</h3>
+      <div id="lect-out" class="lectura-block"><p class="note">Pulse “Generar lectura”.</p></div></div>
+    <div class="card guia"><span class="eyebrow">Guía de interpretación estratégica</span>
+      <h3>Cómo leer estos indicadores</h3><div id="lect-guia"></div></div>
   </section>
 
   <section id="tab-datos" class="tab-panel">
