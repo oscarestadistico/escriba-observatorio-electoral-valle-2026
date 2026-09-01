@@ -239,20 +239,23 @@ async function renderLectura(){
     <p class="note">Marca IMPACTO · <span class="hand">La gente primero, ¡siempre!</span> — El dato es el protagonista; las decisiones son del equipo.</p>`;
 
   // controles: corporación/vuelta/cir + nivel + territorio
-  const cont=document.getElementById("ctrl-lect"); 
-  segControls(cont,comp,{},({corp,vuelta,cir})=>{ window._lectSeg={corp,vuelta,cir}; refreshTerr(); });
-  const sNivel=mkControl(cont,"Nivel","l-niv"); fillSelect(sNivel,[
-    {v:"valle",t:"Valle (departamento)"},{v:"municipio",t:"Municipio"},{v:"comuna",t:"Comuna (Cali)"}]);
-  const sTerr=mkControl(cont,"Territorio","l-terr");
+  const cont=document.getElementById("ctrl-lect");
+  let sNivel, sTerr;
   function terrList(){
-    const s=window._lectSeg||{}; const niv=sNivel.value;
+    const s=window._lectSeg||{}; const niv=sNivel?sNivel.value:"valle";
     if(niv==="valle") return [{v:"VALLE DEL CAUCA",t:"Valle del Cauca"}];
     if(niv==="municipio") return seg(muni,s.corp,s.vuelta,s.cir)
       .map(r=>({v:r.dane_codigo,t:r.municipio})).sort((a,b)=>a.t.localeCompare(b.t));
     return seg(comu,s.corp,s.vuelta,s.cir).map(r=>({v:r.territorio_nombre,t:r.territorio_nombre}))
       .sort((a,b)=>a.t.localeCompare(b.t));
   }
-  function refreshTerr(){ fillSelect(sTerr,terrList()); }
+  function refreshTerr(){ if(!sTerr) return; fillSelect(sTerr,terrList()); }
+  // segControls limpia el contenedor y dispara onChange: por eso va primero,
+  // y Nivel/Territorio se crean DESPUÉS (con guardas para el disparo inicial).
+  segControls(cont,comp,{},({corp,vuelta,cir})=>{ window._lectSeg={corp,vuelta,cir}; refreshTerr(); });
+  sNivel=mkControl(cont,"Nivel","l-niv"); fillSelect(sNivel,[
+    {v:"valle",t:"Valle (departamento)"},{v:"municipio",t:"Municipio"},{v:"comuna",t:"Comuna (Cali)"}]);
+  sTerr=mkControl(cont,"Territorio","l-terr");
   sNivel.onchange=refreshTerr; refreshTerr();
 
   document.getElementById("btn-lectura").onclick=()=>{
