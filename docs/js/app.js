@@ -202,6 +202,91 @@ async function renderExp(){
   await onM();
 }
 
+// =================== LECTURA ANALÍTICA (descriptiva) ===================
+function clasifMargen(pp){ if(pp==null||isNaN(pp)) return "no determinada";
+  if(pp<5) return "muy estrecha (competitiva)"; if(pp<10) return "estrecha";
+  if(pp<20) return "moderada"; return "amplia"; }
+function clasifNEP(n){ if(n==null||isNaN(n)) return "no determinado";
+  if(n<2.5) return "concentrado (pocas fuerzas efectivas)"; if(n<4) return "moderadamente fragmentado";
+  return "muy fragmentado (muchas fuerzas efectivas)"; }
+
+async function renderLectura(){
+  const comp=await load("valle/competencia.json");
+  const muni=await load("municipio/competencia.json");
+  const comu=await load("cali/comuna_competencia.json");
+  // guía estática (metodológica, descriptiva)
+  document.getElementById("lect-guia").innerHTML=`
+    <h4>Qué mide cada indicador</h4>
+    <ul>
+      <li><b>% del ganador (sobre válidos):</b> peso de la primera fuerza. Alto = predominio; bajo = territorio disputado.</li>
+      <li><b>Margen 1º–2º (pp):</b> distancia entre las dos primeras fuerzas. &lt;5 pp = muy competitivo; &gt;20 pp = holgado.</li>
+      <li><b>HHI (0–1):</b> concentración del voto. Cercano a 1 = concentrado en pocas fuerzas; cercano a 0 = repartido.</li>
+      <li><b>NEP (nº efectivo de listas):</b> cuántas fuerzas “cuentan” de verdad. Bajo = pocas; alto = muchas.</li>
+      <li><b>% en blanco:</b> señal de inconformidad/indecisión agregada, no de intención individual.</li>
+    </ul>
+    <h4>Cómo usarlo en la discusión estratégica</h4>
+    <ul>
+      <li>Priorizar el análisis por <b>competitividad</b> (margen) y <b>estructura</b> (NEP/HHI) del territorio, no por rasgos de las personas.</li>
+      <li>Comparar cada territorio con el <b>promedio departamental</b> para ubicar dónde el resultado es atípico y merece estudio adicional.</li>
+      <li>Leer el cambio 1V→2V como <b>desplazamiento agregado</b> del resultado, nunca como transferencia individual de votos.</li>
+    </ul>
+    <h4>Límites (no hace)</h4>
+    <ul>
+      <li>No infiere el voto ni el perfil de personas (falacia ecológica).</li>
+      <li>No sugiere mensajes dirigidos a comunidades concretas ni microtargeting.</li>
+      <li>No afirma causas: una diferencia territorial no explica por sí sola el porqué.</li>
+    </ul>
+    <p class="note">Marca IMPACTO · <span class="hand">La gente primero, ¡siempre!</span> — El dato es el protagonista; las decisiones son del equipo.</p>`;
+
+  // controles: corporación/vuelta/cir + nivel + territorio
+  const cont=document.getElementById("ctrl-lect"); 
+  segControls(cont,comp,{},({corp,vuelta,cir})=>{ window._lectSeg={corp,vuelta,cir}; refreshTerr(); });
+  const sNivel=mkControl(cont,"Nivel","l-niv"); fillSelect(sNivel,[
+    {v:"valle",t:"Valle (departamento)"},{v:"municipio",t:"Municipio"},{v:"comuna",t:"Comuna (Cali)"}]);
+  const sTerr=mkControl(cont,"Territorio","l-terr");
+  function terrList(){
+    const s=window._lectSeg||{}; const niv=sNivel.value;
+    if(niv==="valle") return [{v:"VALLE DEL CAUCA",t:"Valle del Cauca"}];
+    if(niv==="municipio") return seg(muni,s.corp,s.vuelta,s.cir)
+      .map(r=>({v:r.dane_codigo,t:r.municipio})).sort((a,b)=>a.t.localeCompare(b.t));
+    return seg(comu,s.corp,s.vuelta,s.cir).map(r=>({v:r.territorio_nombre,t:r.territorio_nombre}))
+      .sort((a,b)=>a.t.localeCompare(b.t));
+  }
+  function refreshTerr(){ fillSelect(sTerr,terrList()); }
+  sNivel.onchange=refreshTerr; refreshTerr();
+
+  document.getElementById("btn-lectura").onclick=()=>{
+    const s=window._lectSeg||{}; const niv=sNivel.value; const key=sTerr.value;
+    let row, nombre, prom;
+    const segRows=(rows)=>seg(rows,s.corp,s.vuelta,s.cir);
+    if(niv==="valle"){ row=segRows(comp)[0]; nombre="Valle del Cauca"; prom=row; }
+    else if(niv==="municipio"){ const rs=segRows(muni); row=rs.find(r=>r.dane_codigo===key);
+      nombre=row?row.municipio:key; prom=segRows(comp)[0]; }
+    else { const rs=segRows(comu); row=rs.find(r=>r.territorio_nombre===key);
+      nombre=key; prom=avgComp(rs); }
+    render(row,nombre,prom,s);
+  };
+  function avgComp(rs){ if(!rs.length) return null;
+    const m=(f)=>rs.reduce((a,r)=>a+(r[f]||0),0)/rs.length;
+    return {top1_pp:m("top1_pp"),margen_pp:m("margen_pp"),hhi:m("hhi"),nep:m("nep")}; }
+
+  function render(row,nombre,prom,s){
+    const t=document.getElementById("lect-title");
+    const out=document.getElementById("lect-out");
+    if(!row){ t.textContent=nombre||"—"; out.innerHTML='<p class="note">Sin datos para esta combinación.</p>'; return; }
+    const corpTxt=s.corp+(s.corp==="Presidencia"?" ("+(VUELTA_TXT[s.vuelta]||s.vuelta)+")":"")+" · circ. "+s.cir;
+    t.textContent=nombre+" — "+corpTxt;
+    const cmpNep = prom&&prom.nep? (row.nep>prom.nep?"más fragmentado":"menos fragmentado")+" que el promedio":"";
+    const cmpMar = prom&&prom.margen_pp!=null? (row.margen_pp<prom.margen_pp?"más competitivo":"menos competitivo")+" que el promedio":"";
+    const items=[
+      {tag:"hecho",txt:`En ${nombre}, la primera fuerza fue <b>${row.ganador}</b> con ${fmt(row.votos_ganador)} votos; la segunda, ${row.segundo||"—"} con ${fmt(row.votos_segundo)}. Total de marcas: ${fmt(row.total_marcas)}; válidos: ${fmt(row.validos)}.`},
+      {tag:"indicador",txt:`% del ganador (válidos): <b>${pct(row.top1_pp)}</b> · margen 1º–2º: <b>${pct(row.margen_pp)}</b> · HHI: <b>${dec(row.hhi,3)}</b> · NEP: <b>${dec(row.nep,2)}</b> · % en blanco: ${pct(row.blanco_pp)}.`},
+      {tag:"lectura",txt:`La competencia entre las dos primeras fuerzas es <b>${clasifMargen(row.margen_pp)}</b>. La estructura de competencia es <b>${clasifNEP(row.nep)}</b>${cmpNep?` — ${cmpNep} departamental`:""}${cmpMar?`; en competitividad, ${cmpMar} departamental`:""}. Lectura descriptiva y agregada; no implica causas ni comportamiento individual.`}
+    ];
+    out.innerHTML=items.map(i=>`<div class="lectura-item"><span class="tag ${i.tag}">${i.tag}</span><p>${i.txt}</p></div>`).join("");
+  }
+}
+
 // =================== SOBRE LOS DATOS ===================
 function renderDatos(){
   const m=MAN; const el=document.getElementById("datos-info");
@@ -217,7 +302,7 @@ function renderDatos(){
 // ---- dispatcher ----
 function render(tab){
   const map={valle:renderValle,presidencia:renderPres,congreso:renderCong,
-    cali:renderCali,explorador:renderExp,datos:renderDatos};
+    cali:renderCali,explorador:renderExp,lectura:renderLectura,datos:renderDatos};
   if(inited[tab]) { if(tab==="datos") renderDatos(); return; }
   inited[tab]=true;
   try{ map[tab](); }catch(e){ console.error(e); alert("Error en módulo "+tab+": "+e.message); }
