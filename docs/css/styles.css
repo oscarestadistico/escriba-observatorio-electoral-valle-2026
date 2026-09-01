@@ -1,55 +1,53 @@
-/* Observatorio Electoral Valle 2026 — sistema de diseño institucional/analítico
-   Dato protagonista. Sin estética propagandística. Los colores partidistas solo
-   aparecen en marcas de datos (mapas/gráficos), nunca en el cromado de la UI. */
+/* Observatorio Electoral Valle 2026 — identidad de marca IMPACTO
+   Rojo Bugambilia #de1749 · Amarillo Lima #eef700 · Crema #fffceb · Negro
+   Tipografía: Montserrat (identidad) + Kalam (acentos). El cromado usa los
+   colores de marca; las SERIES DE DATOS conservan colores neutros propios para
+   no teñir de partidismo los resultados (dato protagonista). */
 :root{
-  --paper:#fbfbfd; --panel:#ffffff; --ink:#0f1620; --muted:#5c6675;
-  --faint:#8a94a3; --line:#e5e9f0; --line2:#eef1f6;
-  --slate:#233243;            /* estructura */
-  --accent:#2f6f7e;           /* acento técnico (cartográfico), no partidista */
-  --accent-soft:#e7f0f2;
-  --warn:#8a5a00; --warnbg:#fff7e8; --warnline:#f0dca8;
-  --pos:#2a7f4f; --neg:#b23b3b;
-  --r:12px; --r-sm:8px;
-  --sp:16px;
-  --shadow:0 1px 2px rgba(16,22,32,.05),0 6px 20px -12px rgba(16,22,32,.18);
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --disp:"Space Grotesk",system-ui,sans-serif;
-  --body:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --bugambilia:#de1749; --bugambilia-d:#b81038; --lima:#eef700; --lima-d:#cfd600;
+  --crema:#fffceb; --panel:#ffffff; --ink:#141414; --muted:#6a6a5f; --faint:#94948a;
+  --line:#ece7d6; --line2:#f2eede; --accent:#de1749; --accent-soft:#fde3ea;
+  --warn:#8a5a00; --warnbg:#fff7e8; --warnline:#f0dca8; --pos:#2a7f4f; --neg:#b81038;
+  --r:12px; --r-sm:8px; --shadow:0 1px 2px rgba(20,20,20,.05),0 8px 22px -14px rgba(222,23,73,.28);
+  --disp:"Montserrat",system-ui,sans-serif; --body:"Montserrat",system-ui,sans-serif;
+  --hand:"Kalam",cursive; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);
+body{margin:0;background:var(--crema);color:var(--ink);font-family:var(--body);
   font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
 
-/* barra de carga superior */
-#loadbar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);
+#loadbar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--lima);
   z-index:2000;transition:width .3s ease,opacity .4s ease;opacity:0}
 #loadbar.on{opacity:1}
 
-.eyebrow{font-family:var(--disp);font-size:10.5px;font-weight:600;letter-spacing:.13em;
-  text-transform:uppercase;color:var(--faint)}
+.eyebrow{font-family:var(--disp);font-size:10.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--bugambilia)}
 
-/* encabezado */
-.topbar{background:var(--slate);color:#fff;padding:16px 24px;display:flex;
-  justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.topbar .eyebrow{color:#9fb0bd}
-.topbar h1{margin:2px 0 0;font-family:var(--disp);font-size:26px;font-weight:700;
-  letter-spacing:-.01em;line-height:1}
-.topbar h1 .yr{color:#7fb3bf;font-weight:500}
-.topbar .sub{margin:6px 0 0;font-size:12.5px;color:#b6c2cd}
+/* encabezado en Rojo Bugambilia */
+.topbar{background:var(--bugambilia);color:#fff;padding:16px 24px;display:flex;
+  justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.brand-row{display:flex;align-items:center;gap:14px}
+.brand-logo{width:46px;height:46px;flex:0 0 auto;filter:drop-shadow(0 2px 3px rgba(0,0,0,.2))}
+.topbar .eyebrow{color:var(--lima)}
+.topbar h1{margin:2px 0 0;font-family:var(--disp);font-size:25px;font-weight:800;
+  letter-spacing:-.01em;line-height:1;text-transform:uppercase}
+.topbar h1 .yr{color:var(--lima)}
+.topbar .sub{margin:5px 0 0;font-size:12.5px;color:#ffe1ea;font-weight:500}
 .ctxwrap{text-align:right}
-.ctx{font-family:var(--mono);font-size:12.5px;color:#eaf1f3;background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.14);border-radius:var(--r-sm);padding:6px 10px;margin-top:4px;
-  max-width:360px}
+.ctx{font-family:var(--mono);font-size:12.5px;color:#fff;background:rgba(0,0,0,.16);
+  border:1px solid rgba(255,255,255,.25);border-radius:var(--r-sm);padding:6px 10px;
+  margin-top:4px;max-width:380px}
 
 /* navegación */
 .tabs{display:flex;flex-wrap:wrap;gap:2px;background:var(--panel);
-  border-bottom:1px solid var(--line);padding:0 16px;position:sticky;top:0;z-index:900}
+  border-bottom:2px solid var(--line);padding:0 16px;position:sticky;top:0;z-index:900}
 .tabs button{border:0;background:transparent;padding:13px 15px;cursor:pointer;
-  font-family:var(--disp);font-size:13px;font-weight:600;color:var(--muted);
-  border-bottom:2px solid transparent;margin-bottom:-1px}
+  font-family:var(--disp);font-size:12.5px;font-weight:700;color:var(--muted);
+  border-bottom:3px solid transparent;margin-bottom:-2px;text-transform:uppercase;
+  letter-spacing:.02em}
 .tabs button:hover{color:var(--ink)}
-.tabs button.active{color:var(--accent);border-bottom-color:var(--accent)}
+.tabs button.active{color:var(--bugambilia);border-bottom-color:var(--bugambilia)}
 
 main{padding:22px 24px 40px;max-width:1200px;margin:0 auto}
 .tab-panel{display:none;animation:fade .35s ease}
@@ -57,68 +55,78 @@ main{padding:22px 24px 40px;max-width:1200px;margin:0 auto}
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.tab-panel{animation:none}}
 
-/* controles */
 .controls{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px;align-items:end;
   padding:14px 16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
 .controls label{display:flex;flex-direction:column;gap:4px;font-family:var(--disp);
-  font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+  font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
 .controls select{padding:8px 10px;border:1px solid var(--line);border-radius:var(--r-sm);
-  background:#fff;font-size:13px;font-family:var(--body);color:var(--ink);min-width:158px;
-  cursor:pointer}
-.controls select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  background:#fff;font-size:13px;font-family:var(--body);color:var(--ink);min-width:158px;cursor:pointer}
+.controls select:focus-visible{outline:2px solid var(--bugambilia);outline-offset:1px}
 
-/* tarjetas */
 .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
   padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow);position:relative}
 .card>.eyebrow{display:block;margin-bottom:2px}
-.card h3{margin:0 0 12px;font-family:var(--disp);font-size:15px;font-weight:600;
-  color:var(--slate);letter-spacing:-.005em}
+.card h3{margin:0 0 12px;font-family:var(--disp);font-size:15px;font-weight:700;
+  color:var(--ink);letter-spacing:-.005em}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:860px){.grid-2{grid-template-columns:1fr}.topbar{align-items:flex-start}
   .ctxwrap{text-align:left}}
 
-/* KPIs */
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:14px;margin-bottom:18px}
-.kpi{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:18px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--bugambilia);
   border-radius:var(--r-sm);padding:14px 16px;box-shadow:var(--shadow)}
-.kpi .v{font-family:var(--mono);font-size:23px;font-weight:600;letter-spacing:-.02em;
-  line-height:1.1;color:var(--ink);word-break:break-word}
+.kpi .v{font-family:var(--disp);font-size:23px;font-weight:800;letter-spacing:-.02em;
+  line-height:1.1;color:var(--ink);word-break:break-word;font-variant-numeric:tabular-nums}
 .kpi .l{font-size:11px;color:var(--muted);margin-top:6px;text-transform:uppercase;
-  letter-spacing:.06em;font-weight:500}
+  letter-spacing:.06em;font-weight:600}
 
-/* mapas y gráficos */
 .map{height:430px;border-radius:var(--r-sm);overflow:hidden;border:1px solid var(--line2)}
 .chart{height:390px}
-.leaflet-container{background:#eef1f5;font-family:var(--body)}
+.leaflet-container{background:#f3efe0;font-family:var(--body)}
 
-/* leyenda de color (empata mapa/gráfico con el catálogo) */
 .legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:12px}
 .legend .item{display:inline-flex;align-items:center;font-size:11.5px;color:var(--muted)}
 .swatch{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:6px;
   border:1px solid rgba(0,0,0,.12)}
 
-/* tablas ledger */
 .tablewrap{max-height:430px;overflow:auto;border:1px solid var(--line2);border-radius:var(--r-sm)}
 table{border-collapse:collapse;width:100%;font-size:12.5px}
 th,td{text-align:left;padding:8px 11px;border-bottom:1px solid var(--line2)}
-th{position:sticky;top:0;background:#f3f5f9;font-family:var(--disp);font-weight:600;
-  font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);z-index:1}
-tbody tr:nth-child(even){background:#fafbfc}
+th{position:sticky;top:0;background:#fbf7ea;font-family:var(--disp);font-weight:700;
+  font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:var(--muted);z-index:1}
+tbody tr:nth-child(even){background:#fffdf5}
 tbody tr:hover{background:var(--accent-soft)}
-td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 
-/* notas y avisos */
 .note{font-size:11.5px;color:var(--faint);margin:10px 0 0;line-height:1.5}
 .warn{background:var(--warnbg);color:var(--warn);border:1px solid var(--warnline);
-  border-left:3px solid #d9a600;border-radius:var(--r-sm);padding:10px 14px;
+  border-left:4px solid #d9a600;border-radius:var(--r-sm);padding:10px 14px;
   font-size:12.5px;margin-bottom:16px}
 
+/* módulo Lectura analítica */
+.btn-primary{background:var(--bugambilia);color:#fff;border:0;border-radius:var(--r-sm);
+  padding:10px 18px;font-family:var(--disp);font-weight:700;font-size:13px;cursor:pointer;
+  text-transform:uppercase;letter-spacing:.03em}
+.btn-primary:hover{background:var(--bugambilia-d)}
+.lectura-block{margin-top:14px}
+.lectura-item{border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 14px;
+  margin-bottom:10px;background:#fff}
+.tag{display:inline-block;font-family:var(--disp);font-size:10px;font-weight:800;
+  letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:6px}
+.tag.hecho{background:#111;color:var(--lima)}
+.tag.indicador{background:var(--lima);color:#111}
+.tag.lectura{background:var(--bugambilia);color:#fff}
+.lectura-item p{margin:2px 0 0;font-size:13px}
+.guia h4{font-family:var(--disp);margin:14px 0 6px;color:var(--bugambilia);font-size:13.5px;text-transform:uppercase;letter-spacing:.03em}
+.guia ul{margin:4px 0 10px;padding-left:18px}
+.guia li{margin:4px 0;color:var(--ink);font-size:12.8px}
+.hand{font-family:var(--hand);color:var(--bugambilia);font-weight:700}
+
 #datos-info p{margin:6px 0}
-#datos-info h4{font-family:var(--disp);margin:16px 0 6px;color:var(--slate)}
+#datos-info h4{font-family:var(--disp);margin:16px 0 6px;color:var(--bugambilia)}
 #datos-info ul{margin:6px 0;padding-left:18px}
 #datos-info li{margin:4px 0;color:var(--muted)}
 
 .foot{padding:18px 24px;color:var(--faint);font-size:11.5px;text-align:center;
-  border-top:1px solid var(--line);margin-top:8px}
-.foot #foot-text{margin:0;font-family:var(--mono)}
+  border-top:2px solid var(--line);margin-top:8px;background:var(--panel)}
+.foot #foot-text{margin:0}
